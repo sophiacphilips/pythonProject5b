@@ -13,7 +13,7 @@ class Taxicab:
         """
         self._x=x
         self._y=y
-        self.odometer= 0
+        self._odometer= 0
 
     def get_coord_x(self):
         """
@@ -28,21 +28,21 @@ class Taxicab:
         return self._y
 
     def get_odometer(self):
-         return self.odometer
+         return self._odometer
 
     def move_x(self, distance):
         """
         distance moved left or right and odometer value
         """
         self._x += distance
-        self.odometer += abs(distance) #use absolute value so answer provides total distance moved, not net distance
+        self._odometer += abs(distance) #use absolute value so answer provides total distance moved, not net distance
 
     def move_y(self, distance):
         """
         distance travelled up or down and odometer value
         """
         self._y += distance
-        self.odometer += abs(distance)
+        self._odometer += abs(distance)
 
 cab=Taxicab(5,8) #creates a Taxicab object at coordinates (5, -8)
 cab.move_x(3) # moves cab 3 units "right"
