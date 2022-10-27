@@ -15,20 +15,23 @@ class Taxicab:
         self._y=y
         self._odometer= 0
 
-    def get_coord_x(self):
+    def get_x_coord(self):
         """
         gets new coord for x, for movement left or right
         """
         return self._x
 
-    def get_coord_y(self):
+    def get_y_coord(self):
         """
         returns distance moved up or down
         """
         return self._y
 
     def get_odometer(self):
-         return self._odometer
+        """
+        returns odometer distance
+        """
+        return self._odometer
 
     def move_x(self, distance):
         """
